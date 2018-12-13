@@ -65,6 +65,19 @@ func main()  {
 	user[1] = t
 
 	fmt.Println(user)
+
+	mapTT := make(map[uint32]string)
+	mapTT[1] = "q"
+	mapTT[2] = "w"
+	mapTT[3] = "e"
+	mapTT[4] = "r"
+	for key, v := range mapTT {
+		if key == 3 {
+			delete(mapTT, key)
+		} else {
+			fmt.Println(v)
+		}
+	}
 }
 
 type ParamStruct struct {

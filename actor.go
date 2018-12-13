@@ -70,7 +70,7 @@ func NewServer() *Server {
 func main()  {
 	timer := time.NewTimer(time.Second * 2)
 	ticker := time.NewTicker(time.Second * 1)
-
+	//tmp := new(Server)
 	for {
 		time.Now().Unix()
 		select {

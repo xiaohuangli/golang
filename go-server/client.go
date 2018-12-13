@@ -13,7 +13,7 @@ const (
 
 func main() {
 
-	for i := 0; i < 300; i++{
+	for i := 0; i < 1; i++{
 		conn, err := net.Dial("tcp", addr)
 		if err != nil {
 			fmt.Println("连接服务器失败：", err.Error())
@@ -23,7 +23,7 @@ func main() {
 		fmt.Printf("客戶端 %d 已连接服务器 \n", i)
 		defer conn.Close()
 		Client(conn)
-		time.Sleep(time.Second)
+		time.Sleep(time.Second*2)
 	}
 
 	channel := make(chan int32)
